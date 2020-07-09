@@ -1,11 +1,11 @@
 <template>
     <div>
-        <p>To do Item</p>
+        <p>{{todo.title}}</p>
     </div>
 </template>
 <script>
 export default {
-    name: "Todo Items",
+    name: "TodoItems",
     props: ["todo"]
 }
 </script>
