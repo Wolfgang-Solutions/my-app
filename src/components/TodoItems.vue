@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="todo-item">
         <p>{{todo.title}}</p>
     </div>
 </template>
