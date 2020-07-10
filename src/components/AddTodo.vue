@@ -11,11 +11,14 @@
 import  uuid  from "uuid";
 export default {
     name: "AddTodo",
-    data() {
+    data() 
+    {
         return {
             title: ''
-        },
-    methods: {
+        }
+    },
+    methods: 
+    {
         addTodo () {
             const  newTodo ={
                 id: uuid.v4(),
@@ -27,7 +30,7 @@ export default {
         }
     }
     }
-}
+
 </script>
 
 <style scoped>
