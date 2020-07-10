@@ -23,7 +23,7 @@ export default {
       this.todos = this.todos.filter(todo => todo.id!== id);
     },
     addTodo(newTodo) {     //whole parameter needs to be prased for new item on list
-      this.todos = [...this.todos, newTodo]  //SPREAD operator
+      this.todos = [...this.todos, newTodo];  //SPREAD operator
     }
   }
 }
