@@ -19,7 +19,8 @@ export default {
     },
     methods: 
     {
-        addTodo () {
+        addTodo (e) {
+            e.preventDefault();
             const  newTodo ={
                 id: uuid.v4(),
                 title: this.title,
@@ -27,6 +28,8 @@ export default {
             }
             //Sending up to parent
             this.$emit('add-todo', newTodo); //whole new Todo needs to be parsed as a parameter
+
+            this.title = '';
         }
     }
     }

@@ -11,6 +11,7 @@
 import Header from './components/layout/Header';
 import Todos from './components/Todos';
 import AddTodo from './components/AddTodo';
+import axios from 'axios';
 export default {
   name:"app",
   components: {
@@ -24,6 +25,11 @@ export default {
     },
     addTodo(newTodo) {     //whole parameter needs to be prased for new item on list
       this.todos = [...this.todos, newTodo];  //SPREAD operator
+    },
+    created(){
+      axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10') //will return a promise  [LIMIT SET AS 10]
+      .then(res => this.todos = res.data)
+      .catch(err => console.log(err));
     }
   }
 }
