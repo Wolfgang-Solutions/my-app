@@ -8,21 +8,22 @@
 </template>
 
 <script>
-import { uuid } from "uuid";
+import  uuid  from "uuid";
 export default {
     name: "AddTodo",
     data() {
         return {
-            title: '';
+            title: ''
         },
     methods: {
-        AddTodo () {
+        addTodo () {
             const  newTodo ={
                 id: uuid.v4(),
                 title: this.title,
                 completed: false
             }
             //Sending up to parent
+            this.$emit('add-todo', newTodo); //whole new Todo needs to be parsed as a parameter
         }
     }
     }
