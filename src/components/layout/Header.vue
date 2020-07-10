@@ -26,7 +26,6 @@ export default {
     color: coral;
     padding-right: 5px;
     text-decoration: none;
-    
 }
 
 </style>
