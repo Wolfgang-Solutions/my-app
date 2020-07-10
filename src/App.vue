@@ -22,7 +22,11 @@ export default {
   methods: {
     deleteTodo(id) {
       axios.delete(`http://jsonplaceholder.typicode/todos/${id}`)
-      this.todos = this.todos.filter(todo => todo.id!== id);
+
+      .then(res => this.todos = this.todos.filter(todo => todo.id !== id))
+      .catch(err => console.log(err))
+      
+      //this.todos = this.todos.filter(todo => todo.id!== id);
     },
     addTodo(newTodo) {     //whole parameter needs to be prased for new item on list
       const {title, completed} = newTodo;
