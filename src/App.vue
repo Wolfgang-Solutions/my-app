@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Header />
-    <AddTodo />
+    <AddTodo v-on:add-todo="addTodo"/>
     <Todo v-bind:todos="todos"  v-on:del-todo="deleteTodo"/>
     <router-view/>
   </div>
