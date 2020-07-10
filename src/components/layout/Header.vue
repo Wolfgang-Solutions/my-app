@@ -25,6 +25,8 @@ export default {
 .header a {
     color: coral;
     padding-right: 5px;
+    text-decoration: none;
+    
 }
 
 </style>
