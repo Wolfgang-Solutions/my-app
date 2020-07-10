@@ -24,7 +24,13 @@ export default {
       this.todos = this.todos.filter(todo => todo.id!== id);
     },
     addTodo(newTodo) {     //whole parameter needs to be prased for new item on list
-      this.todos = [...this.todos, newTodo];  //SPREAD operator
+      const {title, completed} = newTodo;
+
+      axios.post('https://jsonplaceholder.typicode.com/todos', {title, completed}) //PARAMETERS from constant
+      .then(res => this.todos = [...this.todos, res.data])
+      .catch(err => console.log(err));
+
+      //this.todos = [...this.todos, newTodo];  //SPREAD operator
     },
     created(){
       axios.get('https://jsonplaceholder.typicode.com/todos?_limit=10') //will return a promise  [LIMIT SET AS 10]
