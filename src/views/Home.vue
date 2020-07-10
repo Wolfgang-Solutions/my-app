@@ -8,14 +8,13 @@
 </template>
 
 <script>
-import Header from '../components/layout/Header';
+//import Header from '../components/layout/Header';
 import Todos from '../components/Todos';
 import AddTodo from '../components/AddTodo';
 import axios from 'axios';
 export default {
   name:"Home",
   components: {
-    Header,
     Todos,
     AddTodo
   },
