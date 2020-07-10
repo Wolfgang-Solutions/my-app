@@ -15,6 +15,7 @@ import axios from 'axios';
 export default {
   name:"Home",
   components: {
+    //Header,
     Todos,
     AddTodo
   },
